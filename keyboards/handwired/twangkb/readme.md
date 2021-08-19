@@ -1,13 +1,12 @@
-# Planck
+# twangkb
+This is just my personal keyboard, a handwired planck.
 
-A compact 40% (12x4) ortholinear keyboard kit made and sold by OLKB and Massdrop. [More info on qmk.fm](http://qmk.fm/planck/)
+To compile this, just use:
 
-Keyboard Maintainer: [Jack Humbert](https://github.com/jackhumbert)  
-Hardware Supported: Planck PCB rev5  
-Hardware Availability: [OLKB.com](https://olkb.com), [Massdrop](https://www.massdrop.com/buy/planck-mechanical-keyboard?mode=guest_open)
+    util/docker_build.sh handwired/twangkb:default
 
-Make example for this keyboard (after setting up your build environment):
+Convert the json from qmk.conf to c:
 
-    make planck/rev5:default
+    qmk json2c <.json> -o keymap.c
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+Add muse.c to file?
